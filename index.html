@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Architecture Studio — Salar Jung, National Museum & Mughal Heritage</title>
+  <meta name="description" content="Photorealistic 3D architectural synthesis across 4 progressive phases: Base geometry massing, architectural detailing, materials and textures, and photoreal environment with lighting." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>" />
+</head>
+<body>
+  <div id="app">
+    <!-- 3D WebGL Canvas Viewport -->
+    <div id="canvas-container"></div>
+
+    <!-- Glassmorphic HUD Controls Overlay -->
+    <div class="ui-overlay" id="main-ui-overlay">
+      <!-- Top Navigation & Multi-Project Selector -->
+      <header class="top-nav" id="top-nav-slot"></header>
+
+      <!-- Middle Layout: Side Dock for Phase Evolution (Placed on the side to prevent blocking 3D view) -->
+      <div class="middle-layout">
+        <aside class="side-panel-left" id="phase-timeline-slot"></aside>
+      </div>
+
+      <!-- Bottom Layout: Visual & Camera Controls (Right corner dock) -->
+      <footer class="bottom-controls">
+        <div class="bottom-spacer"></div>
+        <div id="render-controls-slot"></div>
+      </footer>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
